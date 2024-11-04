@@ -125,10 +125,6 @@ h2 {
   gap: 50px; /* Set gap between items */
 }
 
-.author-profile {
-  width: 550px; /* Set width for author profile */
-}
-
 .author-profile h2 {
   text-align: center; /* Center align author profile heading */
 }
