@@ -35,8 +35,12 @@
   color: white; /* Set text color */
   font-family: "Teko", sans-serif; /* Set font for the title */
   font-size: 3em; /* Set font size */
+  transition: color 0.3s; /* Smooth transition for color change */
 }
 
+.navigation-bar h1:hover { /* Change title color on hover */
+  color: #4DCCBD; /* Set hover color */
+}
 .navigation-list ul { /* Style for the unordered list in the navigation */
   display: flex; /* Use flexbox layout */
   list-style: none; /* Remove bullet points */
@@ -48,6 +52,11 @@
 
 .navigation-list a { /* Style for links in the navigation */
   color: white; /* Set text color */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.navigation-list a:hover { /* Underline effect on link hover */
+  color: #4DCCBD; /* Set hover color */
 }
 
 .navigation-bar button { /* Style for the search button */
