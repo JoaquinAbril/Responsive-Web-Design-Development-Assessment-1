@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap'); /* Import fonts from Google Fonts */
+
+:root { /* Define CSS variables for colors and spacing */
+  --primary-color: #070410; /* Primary color */
+  --secondary-color: #4DCCBD; /* Secondary color */
+  --btn-color: #EEF36A; /* Button color */
+  --btn-hover-color: #D4E500; /* Button hover color */
+  --btn-text-hover-color: #070410; /* Button text color on hover */
+  
+  --small-spacing: 16px; /* Small spacing value */
+  --mobile-spacing: 16px; /* Mobile spacing value */
+  --tablet-spacing: 32px; /* Tablet spacing value */
+  --desktop-spacing: 48px; /* Desktop spacing value */
+}
+
+* { /* Apply styles to all elements */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  text-decoration: none; /* Remove text decoration from links */
+  font-family: "Lato", sans-serif; /* Set the default font family */
+}
+
+.navigation-bar { /* Style for the navigation bar */
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center; /* Center items vertically */
+  height: 60px; /* Set height of the navigation bar */
+  background-color: var(--primary-color); /* Set background color */
+  padding: var(--desktop-spacing) var(--small-spacing); /* Add padding */
+  box-shadow: 10px 10px var(--secondary-color); /* Add shadow effect */
+}
+
+.navigation-bar h1 { /* Style for the main title in the navigation bar */
+  color: white; /* Set text color */
+  font-family: "Teko", sans-serif; /* Set font for the title */
+  font-size: 3em; /* Set font size */
+}
+
+.navigation-list ul { /* Style for the unordered list in the navigation */
+  display: flex; /* Use flexbox layout */
+  list-style: none; /* Remove bullet points */
+}
+
+.navigation-list li { /* Style for each list item */
+  margin: 0 var(--desktop-spacing); /* Add horizontal margin */
+}
+
+.navigation-list a { /* Style for links in the navigation */
+  color: white; /* Set text color */
+}
+
+.navigation-bar button { /* Style for the search button */
+  background-color: var(--btn-color); /* Set background color */
+  color: var(--primary-color); /* Set text color */
+  padding: var(--small-spacing); /* Add padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Round the corners */
+  font-family: "Teko", sans-serif; /* Set font for the button */
+  font-size: 2em; /* Set font size */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.navigation-bar button:hover { /* Style for button on hover */
+  background-color: var(--btn-hover-color); /* Change background color */
+  color: var(--btn-text-hover-color); /* Change text color */
+}
+
+.film-container { /* Container for film cards */
+  display: grid; /* Use grid layout */
+  grid-template-areas: /* Define areas for grid items */
+    "filmCardOne filmCardOne"
+    "filmCardTwo filmCardThree"
+    "filmCardFour filmCardFour"
+    "filmCardFive filmCardFive"
+    "filmCardSix filmCardSix";
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  width: 900px; /* Set width of the container */
+  margin: 0 auto; /* Center the container */
+}
+
+p { /* Style for paragraph elements */
+  font-size: 1.5em; /* Set font size */
+}
+
+img { /* Style for images */
+  border: var(--primary-color) 5px solid; /* Add border with primary color */
+}
+
+.film-card-one { /* Style for the first film card */
+  grid-area: filmCardOne; /* Assign grid area */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Arrange children vertically */
+  background-color: var(--primary-color); /* Set background color */
+  margin: var(--desktop-spacing) 0; /* Add vertical margin */
+}
+
+.film-card-one img { /* Style for the image in the first film card */
+  width: 900px; /* Set width */
+  height: 400px; /* Set height */
+}
+
+.film-text-one { /* Style for text in the first film card */
+  padding: var(--small-spacing); /* Add padding */
+  color: white; /* Set text color */
+  display: flex; /* Use flexbox layout */
+  gap: var(--small-spacing); /* Add space between children */
+}
+
+button { /* General button styles */
+  background-color: var(--btn-color); /* Set background color */
+  color: var(--primary-color); /* Set text color */
+  padding: var(--small-spacing) var(--desktop-spacing); /* Add padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Round the corners */
+  font-family: "Teko", sans-serif; /* Set font for buttons */
+  font-size: 2em; /* Set font size */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+button:hover { /* Style for buttons on hover */
+  background-color: var(--btn-hover-color); /* Change background color */
+  color: var(--btn-text-hover-color); /* Change text color */
+}
+
+.film-card-two { /* Style for the second film card */
+  grid-area: filmCardTwo; /* Assign grid area */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Arrange children vertically */
+  background-color: var(--primary-color); /* Set background color */
+  width: 420px; /* Set width */
+}
+
+.film-card-three { /* Style for the third film card */
+  grid-area: filmCardThree; /* Assign grid area */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Arrange children vertically */
+  background-color: var(--primary-color); /* Set background color */
+  width: 420px; /* Set width */
+  margin-left: auto; /* Align to the right */
+}
+
+.film-card-two, .film-card-three { /* Common styles for second and third film cards */
+  margin-bottom: var(--desktop-spacing); /* Add bottom margin */
+}
+
+.film-card-two img, .film-card-three img { /* Style for images in the second and third film cards */
+  width: 420px; /* Set width */
+  height: 420px; /* Set height */
+}
+
+.film-text-two, .film-text-three { /* Style for text in the second and third film cards */
+  padding: var(--small-spacing); /* Add padding */
+  color: white; /* Set text color */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Arrange children vertically */
+}
+
+.film-text-two button { /* Style for button in the second film card */
+  margin-top: var(--small-spacing); /* Add top margin */
+}
+
+.film-text-three button { /* Style for button in the third film card */
+  margin-top: 45px; /* Add top margin */
+}
+
+.film-card-four { /* Style for the fourth film card */
+  grid-area: filmCardFour; /* Assign grid area */
+  display: flex; /* Use flexbox layout */
+  background-color: var(--primary-color); /* Set background color */
+  margin-bottom: var(--desktop-spacing); /* Add bottom margin */
+}
+
+.film-card-four img, .film-card-five img, .film-card-six img { /* Style for images in fourth, fifth, and sixth film cards */
+  width: 420px; /* Set width */
+  height: 100%; /* Set height */
+}
+
+.film-text-four { /* Style for text in the fourth film card */
+  padding: var(--small-spacing); /* Add padding */
+  color: white; /* Set text color */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Arrange children vertically */
+  justify-content: space-between; /* Space items evenly */
+}
+
+.film-card-five { /* Style for the fifth film card */
+  grid-area: filmCardFive; /* Assign grid area */
+  display: flex; /* Use flexbox layout */
+  background-color: var(--primary-color); /* Set background color */
+  margin-bottom: var(--desktop-spacing); /* Add bottom margin */
+}
+
+.film-card-six { /* Style for the sixth film card */
+  grid-area: filmCardSix; /* Assign grid area */
+  display: flex; /* Use flexbox layout */
+  background-color: var(--primary-color); /* Set background color */
+  margin-bottom: var(--desktop-spacing); /* Add bottom margin */
+}
+
+.film-card-one, .film-card-two, .film-card-three, .film-card-four, .film-card-five, .film-card-six { /* Common styles for all film cards */
+  box-shadow: 10px 10px var(--secondary-color); /* Add shadow effect */
+}
+
+@media screen and (max-width: 1024px) { /* Styles for tablet devices */
+  .navigation-bar { /* Adjust navigation bar styles */
+    margin-bottom: var(--tablet-spacing); /* Add bottom margin */
+  }
+  
+  .navigation-list li { /* Adjust list item styles */
+    margin: 0 var(--small-spacing); /* Add horizontal margin */
+  }
+
+  .film-container { /* Adjust film container styles */
+    grid-template-areas: /* Update grid areas */
+      "filmCardOne filmCardTwo"
+      "filmCardThree filmCardFour"
+      "filmCardFive filmCardSix";
+    width: 670px; /* Set width */
+    margin: 0 auto; /* Center the container */
+    grid-row-gap: var(--tablet-spacing); /* Add vertical spacing */
+  }
+
+  .film-card-one, .film-card-two, .film-card-three, .film-card-four, .film-card-five, .film-card-six { /* Common styles for all film cards */
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Arrange children vertically */
+    width: 300px; /* Set width */
+    margin: auto; /* Center the cards */
+    height: 100%; /* Set height */
+  }
+
+  .film-card-one img, .film-card-two img, .film-card-three img, .film-card-four img, .film-card-five img, .film-card-six img { /* Style for images in all film cards */
+    width: 300px; /* Set width */
+    height: 100%; /* Set height */
+  }
+
+  .film-text-one, .film-text-two, .film-text-three, .film-text-four { /* Common styles for text in all film cards */
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Arrange children vertically */
+  }
+
+  .film-card-one button, .film-card-two button, .film-card-three button, .film-card-four button, .film-card-five button, .film-card-six button { /* Common styles for buttons in all film cards */
+    margin-top: var(--tablet-spacing); /* Add top margin */
+  }
+
+  .film-card-two button { /* Adjust button styles in the second film card */
+    margin-top: 48px; /* Add top margin */
+  }
+
+  .film-card-three button { /* Adjust button styles in the third film card */
+    margin-top: 90px; /* Add top margin */
+  }
+
+  .film-card-five button { /* Adjust button styles in the fifth film card */
+    margin-top: 119px; /* Add top margin */
+  }
+
+  body { /* Style for the body */
+    padding-bottom: var(--tablet-spacing); /* Add bottom padding */
+  }
+}
+
+@media screen and (max-width: 720px) { /* Styles for mobile devices */
+  .navigation-bar { /* Adjust navigation bar styles */
+    margin-bottom: var(--mobile-spacing); /* Add bottom margin */
+    box-shadow: none; /* Remove shadow */
+  }
+
+  .navigation-bar h1 { /* Adjust title styles */
+    font-size: 2em; /* Set font size */
+  }
+
+  .navigation-list { /* Hide the navigation list */
+    display: none; /* Do not display */
+  }
+
+  .film-container { /* Adjust film container styles */
+    grid-template-areas: /* Update grid areas */
+      "filmCardOne"
+      "filmCardTwo"
+      "filmCardThree"
+      "filmCardFour"
+      "filmCardFive"
+      "filmCardSix";
+    margin: 20px auto; /* Center the container */
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Arrange children vertically */
+    justify-content: center; /* Center content */
+    align-items: center; /* Align items center */
+    width: 100%; /* Set full width */
+    grid-row-gap: var(--mobile-spacing); /* Add vertical spacing */
+  }
+
+  .film-card-one, .film-card-two, .film-card-three, .film-card-four, .film-card-five, .film-card-six { /* Common styles for all film cards */
+    width: 360px; /* Set width */
+  }
+
+  .film-card-one img, .film-card-two img, .film-card-three img, .film-card-four img, .film-card-five img, .film-card-six img { /* Style for images in all film cards */
+    width: 360px; /* Set width */
+  }
+
+  .film-card-one, .film-card-two, .film-card-three, .film-card-four, .film-card-five, .film-card-six { /* Common styles for all film cards */
+    box-shadow: none; /* Remove shadow */
+  }
+
+  body { /* Style for the body */
+    padding-bottom: 0; /* Remove bottom padding */
+  }
+}

@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Protest+Guerrilla&display=swap'); /* Import Google Fonts */
+
+/* Define spacing variables */
+:root {
+  --spacing-sm: 12px; /* Small spacing */
+  --spacing-lm: 20px; /* Large medium spacing */
+  --spacing-tablet: 30px; /* Tablet spacing */
+  --spacing-desktop: 50px; /* Desktop spacing */
+}
+
+/* Reset default styles for all elements */
+* {
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  text-decoration: none; /* Remove underline from links */
+  font-family: "Josefin Sans", sans-serif; /* Set default font */
+  font-size: 16px; /* Set default font size */
+}
+
+/* Body styling */
+body {
+  background-color: #e9e9e9; /* Set background color */
+}
+
+/* Header styling */
+header {
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center align items */
+}
+
+/* Logo image styling */
+.logo-img {
+  margin-top: var(--spacing-desktop); /* Add top margin */
+  width: 200px; /* Set logo width */
+}
+
+/* Navigation menu styling */
+nav ul {
+  display: flex; /* Use flexbox for the menu */
+  list-style: none; /* Remove bullet points from list */
+}
+
+nav li {
+  margin: var(--spacing-desktop) 125px; /* Set margin for list items */
+}
+
+nav li a {
+  color: black; /* Set link color */
+}
+
+/* Main content area styling */
+main {
+  background-color: white; /* Set background color for main */
+  width: 1024px; /* Set width for main content */
+  margin: 0 auto; /* Center align main */
+}
+
+/* Heading styling */
+h2 {
+  font-size: 48px; /* Set font size for h2 */
+  margin-bottom: 20px; /* Add bottom margin */
+  font-family: "Protest Guerrilla", sans-serif; /* Set font for h2 */
+}
+
+/* About section styling */
+.about-section {
+  padding: 0 var(--spacing-desktop); /* Set padding */
+  padding-top: var(--spacing-desktop); /* Add top padding */
+}
+
+.main-title {
+  font-size: 135px; /* Set font size for main title */
+  line-height: 100px; /* Set line height for main title */
+  font-family: "Protest Guerrilla", sans-serif; /* Set font for main title */
+}
+
+.about-section h2 {
+  padding-top: 10px; /* Add top padding to h2 in about section */
+}
+
+.about-description {
+  width: 800px; /* Set width for about description */
+  margin-bottom: 20px; /* Add bottom margin */
+}
+
+.about-description p {
+  font-size: 24px; /* Set font size for paragraph in about description */
+}
+
+/* Content heading styling */
+.content-heading {
+  column-count: 3; /* Set column count for content heading */
+  padding: 0 var(--spacing-desktop); /* Add horizontal padding */
+}
+
+.content-heading p {
+  font-size: 20px; /* Set font size for paragraph in content heading */
+}
+
+.content-heading-2 {
+  padding-top: 20px; /* Add top padding */
+}
+
+/* Gallery section styling */
+.gallery-section {
+  display: grid; /* Use grid layout */
+  grid-template-areas: /* Define grid areas for photos */
+    "photoOne photoTwo photoThree"
+    "photoOne photoFour photoFive";
+  grid-template-columns: 1fr 25% 25%; /* Set column widths */
+  margin: var(--spacing-desktop) 0; /* Add vertical margin */
+}
+
+.gallery-section > img {
+  width: 100%; /* Set width for images */
+  height: 100%; /* Set height for images */
+  object-fit: cover; /* Maintain aspect ratio while covering the area */
+}
+
+.gallery-photo {
+  grid-area: photoOne; /* Define grid area for first photo */
+}
+
+/* Author section styling */
+.author-section {
+  display: flex; /* Use flexbox for author section */
+  align-items: center; /* Center align items */
+  padding: 0px var(--spacing-desktop); /* Add horizontal padding */
+  padding-bottom: var(--spacing-desktop); /* Add bottom padding */
+  gap: var(--spacing-desktop); /* Set gap between items */
+}
+
+.author-profile {
+  width: 550px; /* Set width for author profile */
+}
+
+.author-profile h2 {
+  text-align: center; /* Center align author profile heading */
+}
+
+.author-picture img {
+  width: 200px; /* Set width for author picture */
+  border-radius: 50%; /* Make image circular */
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Footer styling */
+footer {
+  text-align: center; /* Center align footer text */
+  background-color: #14181d; /* Set footer background color */
+  color: white; /* Set footer text color */
+  padding: var(--spacing-desktop); /* Add padding */
+  width: 1024px; /* Set footer width */
+  margin: 0 auto; /* Center align footer */
+}
+
+/* Responsive styles for tablet and smaller devices */
+@media screen and (max-width: 1024px) {
+  .logo-img {
+    margin-top: var(--spacing-tablet); /* Adjust logo margin for tablet */
+  }
+  
+  nav li {
+    margin: var(--spacing-tablet) 60px; /* Adjust margin for nav items */
+  }
+
+  main {
+    width: 540px; /* Adjust main width for tablet */
+  }
+  
+  h2 {
+    font-size: 48px; /* Adjust font size for h2 */
+    margin-bottom: 20px; /* Maintain bottom margin */
+    font-family: "Protest Guerrilla", sans-serif; /* Set font for h2 */
+    text-align: center; /* Center align h2 */
+  }
+  
+  .about-section {
+    padding: 0 var(--spacing-tablet); /* Adjust padding for about section */
+    padding-top: var(--spacing-tablet); /* Adjust top padding */
+  }
+  
+  .main-title {
+    font-size: 48px; /* Adjust font size for main title */
+    font-family: "Protest Guerrilla", sans-serif; /* Set font for main title */
+    line-height: normal; /* Set normal line height */
+    text-align: center; /* Center align main title */
+  }
+
+  .about-section h2 {
+    text-align: center; /* Center align h2 in about section */
+    padding-top: 0; /* Remove top padding */
+  }
+  
+  .about-description {
+    width: 480px; /* Adjust width for about description */
+    margin-bottom: 20px; /* Maintain bottom margin */
+  }
+  
+  .content-heading {
+    column-count: 1; /* Set single column for content heading */
+    padding: 0 var(--spacing-tablet); /* Adjust padding */
+  }
+  
+  .content-heading-2 {
+    padding-top: 20px; /* Add top padding */
+  }
+
+  .gallery-photo {
+    display: none; /* Hide first gallery photo */
+  }
+
+  .gallery-section {
+    grid-template-areas: /* Adjust grid areas for gallery */
+      "photoTwo photoThree"
+      "photoFour photoFive";
+    grid-template-columns: 1fr 50%; /* Adjust column widths */
+    margin: var(--spacing-tablet) 0; /* Adjust margin */
+  }
+  
+  .gallery-section > img {
+    width: 100%; /* Maintain image width */
+    height: 100%; /* Maintain image height */
+    object-fit: cover; /* Maintain aspect ratio */
+  }
+
+  .author-section {
+    padding: 0px var(--spacing-tablet); /* Adjust padding for author section */
+    padding-bottom: var(--spacing-tablet); /* Adjust bottom padding */
+  }
+
+  footer {
+    padding: var(--spacing-tablet); /* Adjust padding for footer */
+    width: 540px; /* Adjust width for footer */
+  }
+}
+
+/* Responsive styles for small devices */
+@media screen and (max-width: 720px) {
+  .logo-img {
+    margin-top: var(--spacing-lm); /* Adjust logo margin for small devices */
+  }
+
+  nav li {
+    margin: var(--spacing-lm) 50px; /* Adjust margin for nav items */
+  }
+
+  main {
+    width: 100%; /* Set main width to 100% */
+  }
+
+  .about-section {
+    padding: 0 var(--spacing-lm); /* Adjust padding for about section */
+    padding-top: var(--spacing-lm); /* Adjust top padding */
+  }
+
+  .about-description {
+    width: 100%; /* Set about description width to 100% */
+  }
+
+  .content-heading {
+    padding: 0 var(--spacing-lm); /* Adjust padding for content heading */
+  }
+
+  .gallery-section {
+    grid-template-areas: /* Adjust grid areas for gallery */
+      "photoTwo" 
+      "photoThree"
+      "photoFour" 
+      "photoFive";
+    grid-template-columns: 100%; /* Set column width to 100% */
+    margin: var(--spacing-lm) 0; /* Adjust margin */
+  }
+
+  .author-section {
+    padding: 0px var(--spacing-lm); /* Adjust padding for author section */
+    padding-bottom: var(--spacing-lm); /* Adjust bottom padding */
+    flex-direction: column-reverse; /* Stack items vertically in reverse */
+  }
+
+  .author-profile {
+    width: 400px; /* Adjust width for author profile */
+  }
+
+  footer {
+    padding: var(--spacing-lm); /* Adjust padding for footer */
+    width: 100%; /* Set footer width to 100% */
+  }
+}
+
+/* Responsive styles for extra small devices */
+@media screen and (max-width: 540px) {
+  .logo-img {
+    margin-top: var(--spacing-sm); /* Adjust logo margin for extra small devices */
+  }
+
+  nav li {
+    margin: var(--spacing-sm) 20px; /* Adjust margin for nav items */
+  }
+
+  main {
+    width: 100%; /* Set main width to 100% */
+  }
+
+  .about-section {
+    padding: 0 var(--spacing-sm); /* Adjust padding for about section */
+    padding-top: var(--spacing-sm); /* Adjust top padding */
+  }
+
+  .about-description {
+    width: 100%; /* Set about description width to 100% */
+  }
+
+  .content-heading {
+    padding: 0 var(--spacing-sm); /* Adjust padding for content heading */
+  }
+
+  .gallery-section {
+    grid-template-areas: /* Adjust grid areas for gallery */
+      "photoTwo" 
+      "photoThree"
+      "photoFour" 
+      "photoFive";
+    grid-template-columns: 100%; /* Set column width to 100% */
+    margin: var(--spacing-sm) 0; /* Adjust margin */
+  }
+
+  .author-section {
+    padding: 0px var(--spacing-sm); /* Adjust padding for author section */
+    padding-bottom: var(--spacing-sm); /* Adjust bottom padding */
+    flex-direction: column-reverse; /* Stack items vertically in reverse */
+  }
+
+  footer {
+    padding: var(--spacing-sm); /* Adjust padding for footer */
+    width: 100%; /* Set footer width to 100% */
+  }
+}
