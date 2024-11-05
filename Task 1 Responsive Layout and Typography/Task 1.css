@@ -149,7 +149,7 @@ footer {
 @media screen and (max-width: 1024px) {
   .logo-img {
     margin-top: 30px; /* Adjust logo margin for tablet */
-    width: 60px; /* Adjust width for logo */
+    width: 80px; /* Adjust width for logo */
   }
   
   nav li {
