@@ -62,9 +62,9 @@
 .navigation-bar button { /* Style for the search button */
   background-color: var(--btn-color); /* Set background color */
   color: var(--primary-color); /* Set text color */
-  padding: var(--small-spacing); /* Add padding */
-  border: none; /* Remove border */
   border-radius: 5px; /* Round the corners */
+  border: none; /* Remove border */
+  padding: var(--small-spacing); /* Add padding */
   font-family: "Teko", sans-serif; /* Set font for the button */
   font-size: 2em; /* Set font size */
   cursor: pointer; /* Change cursor to pointer */
@@ -106,9 +106,9 @@ img { /* Style for images */
 }
 
 .film-card-one img { /* Style for the image in the first film card */
-  width: 900px; /* Set width */
+  width: 100%; /* Set width */
   height: 400px; /* Set height */
-}
+ }
 
 .film-text-one { /* Style for text in the first film card */
   padding: var(--small-spacing); /* Add padding */
