@@ -7,7 +7,7 @@
   box-sizing: border-box; /* Include padding and border in element's total width and height */
   text-decoration: none; /* Remove underline from links */
   font-family: "Josefin Sans", sans-serif; /* Set default font */
-  font-size: 16px; /* Set default font size */
+  font-size: 20px; /* Set default font size */
 }
 
 /* Body */
@@ -128,7 +128,6 @@ h2 {
 .author-profile h2 {
   text-align: center; /* Center align author profile heading */
 }
-
 .author-picture img {
   width: 200px; /* Set width for author picture */
   border-radius: 50%; /* Make image circular */
@@ -144,6 +143,7 @@ footer {
   width: 1024px; /* Set footer width */
   margin: 0 auto; /* Center align footer */
 }
+
 
 /* For Tablet */
 @media screen and (max-width: 1024px) {
